@@ -1,0 +1,17 @@
+[
+    {
+        "ItemID": 1,
+        "Name": "Chicken",
+        "Price": 120
+    },
+    {
+        "ItemID": 2,
+        "Name": "Meat",
+        "Price": 200
+    },
+    {
+        "ItemID": 3,
+        "Name": "Salads",
+        "Price": 80
+    }
+]

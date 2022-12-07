@@ -28,7 +28,7 @@ export class OrderItemsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.ItemService.getItemList().then(res => this.itemList = res as Item[]);
+    this.ItemService.getItemList().subscribe(res => this.itemList = res as Item[]);
 
     if (this.data.orderItemIndex == null) {
       this.formData = {
@@ -45,14 +45,15 @@ export class OrderItemsComponent implements OnInit {
     }
   }
 
-  updatePrice(ctrl) {
-    if (ctrl.selectedIndex == 0) {
+  updatePrice(event) {
+    console.log(event);
+    if (event.selectedIndex == 0) {
       this.formData.Price = 0;
       this.formData.ItemName = '';
       this.formData.Quantity = 1;
     } else {
-      this.formData.Price = this.itemList[ctrl.selectedIndex - 1].Price;
-      this.formData.ItemName = this.itemList[ctrl.selectedIndex].Name;
+      this.formData.Price = this.itemList[event.selectedIndex - 1].Price;
+      this.formData.ItemName = this.itemList[event.selectedIndex -1].Name;
     }
     this.updateTotal();
   }
