@@ -10,26 +10,27 @@ import { OrderItemsComponent } from './orders/order-items/order-items.component'
 import { OrderService } from './shared/order.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    OrdersComponent,
-    OrderComponent,
-    OrderItemsComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatDialogModule,
-    HttpClientModule
-  ],
-  entryComponents: [OrderItemsComponent],
-  providers: [OrderService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        OrdersComponent,
+        OrderComponent,
+        OrderItemsComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        MatDialogModule
+    ],
+    providers: [
+        OrderService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
