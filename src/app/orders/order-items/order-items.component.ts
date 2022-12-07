@@ -1,10 +1,12 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+ // import { MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA, MatLegacyDialogRef as MatDialogRef } from '@angular/material/legacy-dialog';
+
 import { OrderItem } from 'src/app/shared/order-item.model';
 import { ItemService } from 'src/app/shared/item.service';
 import { Item } from 'src/app/shared/item.model';
 import { NgForm } from '@angular/forms';
 import { OrderService } from 'src/app/shared/order.service';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-order-items',

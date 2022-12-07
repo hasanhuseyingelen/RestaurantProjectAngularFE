@@ -9,7 +9,7 @@ import { OrderItemsComponent } from '../order-items/order-items.component';
   styles: []
 })
 export class OrderComponent implements OnInit {
-  constructor(private service: OrderService,
+  constructor(public service: OrderService,
               private dialog: MatDialog) { }
 
   ngOnInit() {
